@@ -44,3 +44,28 @@ const tourney = arr => {
 }
 
 // or
+
+const tournament = array => {
+  let finalResult = [array],
+    roundResult = [...array],
+    currentlyTracking = [];
+
+  while (finalResult.slice(-1)[0].length > 1) {
+    if (roundResult.length % 2 != 0) {
+      currentlyTracking.unshift(roundResult.pop());
+    }
+
+    if (roundResult.length === 0) {
+      finalResult.push(currentlyTracking.slice(0));
+      roundResult = currentlyTracking.slice(0);
+
+      currentlyTracking = [];
+    
+    } else {
+      let doingChanges = currentlyTracking.push(
+        Math.max(...roundResult.splice(0, 2))
+      );
+    }
+  }
+  return finalResult;
+};
