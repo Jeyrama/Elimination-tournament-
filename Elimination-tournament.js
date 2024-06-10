@@ -27,3 +27,6 @@ Notes:
   Elements of the array will always be >=1 and <= 100
   Input must not be altered.
 */
+
+
+// Solution
