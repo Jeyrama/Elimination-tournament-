@@ -42,3 +42,5 @@ const tourney = arr => {
   
   return [ arr ].concat(tourney(next));
 }
+
+// or
